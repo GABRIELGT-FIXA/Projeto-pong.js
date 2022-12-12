@@ -1,7 +1,7 @@
 //variáveis da Bolinha
 let xBolinha = 300;
 let yBolinha = 200;
-let diametroBolinha = 25;
+let diametroBolinha = 20;
 let raio = diametroBolinha / 2
 
 //variáveis da Raquete Aliada
@@ -178,6 +178,7 @@ function colisaoMinhaRaqueteBiblioteca() {
 
   if (colidiu) {
     velocidadeXBolinha *= -1;
+    raquetada.play()
   }
 
 
@@ -195,6 +196,7 @@ function colisaoInimigaRaqueteBiblioteca() {
 
   if (colidiu) {
     velocidadeXBolinha *= -1;
+    raquetada.play()
   }
 
 
@@ -219,11 +221,14 @@ function incluiPlacar() {
 
   if (xBolinha > 590) {
     placarAliado += 1
+    ponto.play()
   }
 
 
   if (xBolinha < 10) {
     placarInimigo += 1
+    ponto.play()
+
   }
 
 
